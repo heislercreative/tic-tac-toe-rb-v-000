@@ -44,11 +44,3 @@ def turn(board)
     turn(board)
   end
 end
-
-def turn_count(board)
-  turns = 0
-  until turns == 9
-    turn(board)
-    turns += 1
-  end
-end
