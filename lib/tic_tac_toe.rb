@@ -45,7 +45,7 @@ def turn(board)
   end
 end
 
-def play(board)
+def turn_count(board)
   turns = 0
   until turns == 9
     turn(board)
