@@ -47,5 +47,5 @@ end
 
 def turn_count(board)
   board.count do |token|
-    token == "X" || token = || "O"
+    token == "X" || token == "O"
 end
