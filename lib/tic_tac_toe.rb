@@ -90,6 +90,7 @@ def winner(board)
   won?(board) && board[winning_token[0]]
 end
 
+#Play Method#
 def play(board)
-  input = gets
+  turn(board)
 end
