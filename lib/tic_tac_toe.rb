@@ -62,3 +62,30 @@ def current_player(board)
     "O"
   end
 end
+
+def won?(board)
+  WIN_COMBINATIONS.detect do |possibility|
+    board[possibility[0]] == board[possibility[1]] &&
+    board[possibility[1]] == board[possibility[2]] &&
+    position_taken?(board, possibility[0])
+  end
+end
+
+def full?(board)
+  board.all? do |token|
+    token == "X" || token == "O"
+  end
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board) || full?(board)
+end
+
+def winner(board)
+  winning_token = won?(board)
+  won?(board) && board[winning_token[0]]
+end
