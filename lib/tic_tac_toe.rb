@@ -95,4 +95,7 @@ def play(board)
   until over?(board)
     turn(board)
   end
+  if won?(board)
+    puts "Congratulations #{board[winning_token[0]]}"
+  end
 end
